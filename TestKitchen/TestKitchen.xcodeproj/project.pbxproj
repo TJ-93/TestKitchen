@@ -46,6 +46,9 @@
 		BC10A25F1DB9BA1100E6D5ED /* UILabel+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A25E1DB9BA1100E6D5ED /* UILabel+Common.swift */; };
 		BC10A2611DB9BB9200E6D5ED /* UIButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A2601DB9BB9200E6D5ED /* UIButton+Common.swift */; };
 		BC10A2631DB9C39100E6D5ED /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A2621DB9C39100E6D5ED /* Const.swift */; };
+		BC2852901DBDA4CE00570604 /* Controllers.json in Resources */ = {isa = PBXBuildFile; fileRef = BC28528F1DBDA4CE00570604 /* Controllers.json */; };
+		BC2852921DBDACD400570604 /* KtcDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2852911DBDACD400570604 /* KtcDownloader.swift */; };
+		BC2852941DBDB6CD00570604 /* IngreRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2852931DBDB6CD00570604 /* IngreRecommend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		BC10A25E1DB9BA1100E6D5ED /* UILabel+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Common.swift"; sourceTree = "<group>"; };
 		BC10A2601DB9BB9200E6D5ED /* UIButton+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Common.swift"; sourceTree = "<group>"; };
 		BC10A2621DB9C39100E6D5ED /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		BC28528F1DBDA4CE00570604 /* Controllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Controllers.json; sourceTree = "<group>"; };
+		BC2852911DBDACD400570604 /* KtcDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KtcDownloader.swift; sourceTree = "<group>"; };
+		BC2852931DBDB6CD00570604 /* IngreRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngreRecommend.swift; path = ../../../Community/main/model/IngreRecommend.swift; sourceTree = "<group>"; };
 		CF400699BC50CAA995189AC9 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F5BB186922B517F1414676 /* Pods-TestKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +242,8 @@
 				BC10A25E1DB9BA1100E6D5ED /* UILabel+Common.swift */,
 				BC10A2601DB9BB9200E6D5ED /* UIButton+Common.swift */,
 				BC10A2621DB9C39100E6D5ED /* Const.swift */,
+				BC28528F1DBDA4CE00570604 /* Controllers.json */,
+				BC2852911DBDACD400570604 /* KtcDownloader.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -383,6 +391,7 @@
 		BC10A2081DB9A85600E6D5ED /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BC2852931DBDB6CD00570604 /* IngreRecommend.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -749,6 +758,7 @@
 				BC10A2561DB9B2F500E6D5ED /* mine_normal@2x.png in Resources */,
 				BC10A2411DB9AFDF00E6D5ED /* home_select@3x.png in Resources */,
 				BC10A23E1DB9AFDF00E6D5ED /* community_select@2x.png in Resources */,
+				BC2852901DBDA4CE00570604 /* Controllers.json in Resources */,
 				BC10A1D21DB9A50B00E6D5ED /* LaunchScreen.storyboard in Resources */,
 				BC10A25B1DB9B2F500E6D5ED /* shop_normal@3x.png in Resources */,
 				BC10A2521DB9B2F500E6D5ED /* community_normal@2x.png in Resources */,
@@ -839,8 +849,10 @@
 			files = (
 				BC10A1CA1DB9A50B00E6D5ED /* ViewController.swift in Sources */,
 				BC10A25D1DB9B98200E6D5ED /* UIView+Common.swift in Sources */,
+				BC2852921DBDACD400570604 /* KtcDownloader.swift in Sources */,
 				BC10A2201DB9A9DB00E6D5ED /* IngredientViewController.swift in Sources */,
 				BC10A2241DB9AA2E00E6D5ED /* MallViewController.swift in Sources */,
+				BC2852941DBDB6CD00570604 /* IngreRecommend.swift in Sources */,
 				BC10A22A1DB9AB9100E6D5ED /* MainTabBarViewController.swift in Sources */,
 				BC10A25F1DB9BA1100E6D5ED /* UILabel+Common.swift in Sources */,
 				BC10A2261DB9AA4800E6D5ED /* MineViewController.swift in Sources */,
@@ -992,6 +1004,7 @@
 			baseConfigurationReference = CF400699BC50CAA995189AC9 /* Pods-TestKitchen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-980681359.TestKitchen";
@@ -1004,6 +1017,7 @@
 			baseConfigurationReference = E2F5BB186922B517F1414676 /* Pods-TestKitchen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-980681359.TestKitchen";

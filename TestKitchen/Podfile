@@ -3,5 +3,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'TestKitchen' do
-    pod 'SnapKit', '~> 0.22.0'
+   pod 'SnapKit', '~> 0.22.0'
+   pod 'Alamofire'
+   pod 'Kingfisher', '~>2.6.0'
+   pod 'XWSwiftRefresh', '~>0.1.9'
+   pod 'SwiftyJSON', '~>2.3'
 end

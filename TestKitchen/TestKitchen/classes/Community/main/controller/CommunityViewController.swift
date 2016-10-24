@@ -14,8 +14,15 @@ class CommunityViewController: BaseViewController {
         super.viewDidLoad()
 
         view.backgroundColor=UIColor.redColor()
+//       downloadRecommendData()
     }
-
+    //methodName=SceneHome&token=&user_id=&version=4.5
+//    func downloadRecommendData(){
+//       var params=["methodName":"SceneHome","token":"","user_id":"","version":"4.5"]
+//        let downloader=KtcDownloader()
+//        downloader.delegate=self
+//        downloader.postWithUrl(<#T##urlString: String##String#>, params: params)
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

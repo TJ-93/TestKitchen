@@ -14,13 +14,16 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 createViewControllers()  // Do any additional setup after loading the view.
-        tabBar.hidden=true
-      createTabBar()
+       
       
     }
     
     //自定制 TabBar
-    func createTabBar(){
+    func createTabBar(imageNames:[String],titles:[String]){
+        
+        
+        
+        
         bgView=UIView.createView()
         bgView?.backgroundColor=UIColor(white: 0.9, alpha: 1.0)
 
@@ -29,8 +32,8 @@ createViewControllers()  // Do any additional setup after loading the view.
             make.left.right.bottom.equalTo(self.view)
             make.height.equalTo(49)
         })
-        let imageNames=["home","community","shop","shike","mine"]
-        let titles=["食材","社区","商城","食客","我的"]
+//        let imageNames=["home","community","shop","shike","mine"]
+//        let titles=["食材","社区","商城","食客","我的"]
         
 let width=screenW/CGFloat(imageNames.count)
         for i in 0..<imageNames.count{
@@ -43,18 +46,23 @@ let width=screenW/CGFloat(imageNames.count)
                 make.width.equalTo(width)
                 make.top.bottom.equalTo(bgView!)
                 make.left.equalTo(CGPoint(x: 0+CGFloat(i)*width, y: 0))
-                if i==0{
-                    btn.selected=true
-                }
                 
             })
+            //显示标题
             let titleLabel=UILabel.createLabel(titles[i], textAlignment: .Center, font: UIFont.systemFontOfSize(10))
+            titleLabel.tag=400
+            titleLabel.textColor=UIColor.lightGrayColor()
             btn.addSubview(titleLabel)
             
             titleLabel.snp_makeConstraints(closure: { (make) in
                 make.left.right.bottom.equalTo(btn)
                 make.height.equalTo(20)
             })
+            if i==0{
+                btn.selected=true
+                titleLabel.textColor=UIColor.brownColor()
+            }
+
         }
    
     }
@@ -64,18 +72,55 @@ let width=screenW/CGFloat(imageNames.count)
         let lastBtn=bgView?.viewWithTag(300+selectedIndex) as! UIButton
         lastBtn.userInteractionEnabled=true
         lastBtn.selected=false
+        
+        let lastLabel=lastBtn.viewWithTag(400) as! UILabel
+        lastLabel.textColor=UIColor.lightGrayColor()
         //1.2选中当前的按钮
         curbtn.selected=true
         curbtn.userInteractionEnabled=false
+        let curLabel=curbtn.viewWithTag(400) as! UILabel
+        curLabel.textColor=UIColor.brownColor()
         //1.3切换视图控制器
         selectedIndex=index
+        
         
     }
 //创建视图控制器
     func createViewControllers(){
-        let nameArray=["TestKitchen.IngredientViewController","TestKitchen.CommunityViewController","TestKitchen.MallViewController","TestKitchen.FoodClassViewController","TestKitchen.MineViewController"]
-        let imageNames=["home","community","shop","shike","mine"]
-        let titles=["食材","社区","商城","食客","我的"]
+        //从Controllers.json文件里面读取数据
+        let path=NSBundle.mainBundle().pathForResource("Controllers", ofType: "json")
+        let data=NSData(contentsOfFile: path!)
+        
+        var nameArray=[String]()
+        var imageNames=[String]()
+        var titles=[String]()
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+            if json.isKindOfClass(NSArray){
+                let tmpArray=json as! [[String:String]]
+                
+                for tmpDic in tmpArray{
+                    let name=tmpDic["ctrlname"]
+                    nameArray.append(name!)
+                    let imageName=tmpDic["image"]
+                    imageNames.append(imageName!)
+                    let title=tmpDic["title"]
+                    titles.append(title!)
+                }
+            }
+            
+        } catch (let error){
+            print(error)
+        }
+        if nameArray.count==0{
+            imageNames=["home","community","shop","shike","mine"]
+            titles=["食材","社区","商城","食客","我的"]
+    nameArray=["TestKitchen.IngredientViewController","TestKitchen.CommunityViewController","TestKitchen.MallViewController","TestKitchen.FoodClassViewController","TestKitchen.MineViewController"]
+        }
+//        
+//        let nameArray=["TestKitchen.IngredientViewController","TestKitchen.CommunityViewController","TestKitchen.MallViewController","TestKitchen.FoodClassViewController","TestKitchen.MineViewController"]
+//        let imageNames=["home","community","shop","shike","mine"]
+//        let titles=["食材","社区","商城","食客","我的"]
         var ctrlArray=[UINavigationController]()
         for i in 0..<nameArray.count{
             //使用类名创建类的对象
@@ -91,6 +136,12 @@ let width=screenW/CGFloat(imageNames.count)
             ctrlArray.append(navCtrl)
         }
         viewControllers=ctrlArray
+        
+        tabBar.hidden=true
+        createTabBar(imageNames, titles: titles)
+        
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,14 +13,20 @@ class IngredientViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       downloadRecommendData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func downloadRecommendData(){
+        let params=["methodName":"SceneHome","token":"","user_id":"","version":"4.5"]
+        let downloader=KtcDownloader()
+        downloader.delegate=self
+        downloader.postWithUrl(kHostUrl, params: params)
+    }
+
 
     /*
     // MARK: - Navigation
@@ -33,3 +39,21 @@ class IngredientViewController: BaseViewController {
     */
 
 }
+extension IngredientViewController:KTCDownloaderDelegate{
+    func downloader(downloader: KtcDownloader, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    
+    func downloader(downloader: KtcDownloader, didFinishWithData data: NSData?) {
+        let str=NSString(data: data!, encoding: NSUTF8StringEncoding)
+        print(str)
+    }
+    
+}
+
+
+
+
+
+
