@@ -46,9 +46,44 @@
 		BC10A25F1DB9BA1100E6D5ED /* UILabel+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A25E1DB9BA1100E6D5ED /* UILabel+Common.swift */; };
 		BC10A2611DB9BB9200E6D5ED /* UIButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A2601DB9BB9200E6D5ED /* UIButton+Common.swift */; };
 		BC10A2631DB9C39100E6D5ED /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A2621DB9C39100E6D5ED /* Const.swift */; };
+		BC1848871DBEED6500750C99 /* IngreRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1848861DBEED6500750C99 /* IngreRecommendView.swift */; };
+		BC18488A1DBEF39400750C99 /* IngreBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1848881DBEF39400750C99 /* IngreBannerCell.swift */; };
+		BC18488B1DBEF39400750C99 /* IngreBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1848891DBEF39400750C99 /* IngreBannerCell.xib */; };
+		BC18488D1DBEF7F600750C99 /* sdefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BC18488C1DBEF7F600750C99 /* sdefaultImage.png */; };
+		BC1848941DBF0A2600750C99 /* IngreLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1848921DBF0A2600750C99 /* IngreLikeCell.swift */; };
+		BC1848951DBF0A2600750C99 /* IngreLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1848931DBF0A2600750C99 /* IngreLikeCell.xib */; };
 		BC2852901DBDA4CE00570604 /* Controllers.json in Resources */ = {isa = PBXBuildFile; fileRef = BC28528F1DBDA4CE00570604 /* Controllers.json */; };
 		BC2852921DBDACD400570604 /* KtcDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2852911DBDACD400570604 /* KtcDownloader.swift */; };
 		BC2852941DBDB6CD00570604 /* IngreRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2852931DBDB6CD00570604 /* IngreRecommend.swift */; };
+		BC42F4B51DC2E0A400D0D75C /* IngreSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42F4B31DC2E0A400D0D75C /* IngreSceneCell.swift */; };
+		BC42F4B61DC2E0A400D0D75C /* IngreSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC42F4B41DC2E0A400D0D75C /* IngreSceneCell.xib */; };
+		BC42F4B81DC2E59300D0D75C /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = BC42F4B71DC2E59300D0D75C /* play.png */; };
+		BC42F4BB1DC300F100D0D75C /* IngreSceneListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42F4B91DC300F100D0D75C /* IngreSceneListCell.swift */; };
+		BC42F4BC1DC300F100D0D75C /* IngreSceneListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC42F4BA1DC300F100D0D75C /* IngreSceneListCell.xib */; };
+		BC4FD14A1DC6D0E000BA955F /* IngreTalnetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FD1481DC6D0E000BA955F /* IngreTalnetCell.swift */; };
+		BC4FD14B1DC6D0E000BA955F /* IngreTalnetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4FD1491DC6D0E000BA955F /* IngreTalnetCell.xib */; };
+		BC4FD14E1DC6DD3700BA955F /* IngrePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FD14C1DC6DD3700BA955F /* IngrePostCell.swift */; };
+		BC4FD14F1DC6DD3700BA955F /* IngrePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4FD14D1DC6DD3700BA955F /* IngrePostCell.xib */; };
+		BC4FD17A1DC8215400BA955F /* IngreTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FD1781DC8215400BA955F /* IngreTopicCell.swift */; };
+		BC4FD17B1DC8215400BA955F /* IngreTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4FD1791DC8215400BA955F /* IngreTopicCell.xib */; };
+		BC4FD17E1DC82F8200BA955F /* saoyisao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4FD17C1DC82F8200BA955F /* saoyisao@2x.png */; };
+		BC4FD17F1DC82F8200BA955F /* saoyisao@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4FD17D1DC82F8200BA955F /* saoyisao@3x.png */; };
+		BC4FD1811DC8397200BA955F /* KTCSegCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FD1801DC8397200BA955F /* KTCSegCtrl.swift */; };
+		BC4FD1831DC8429100BA955F /* IngreMaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FD1821DC8429100BA955F /* IngreMaterialView.swift */; };
+		BC5D757D1DC0538C00F056F8 /* IngerLikeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D757C1DC0538C00F056F8 /* IngerLikeHeaderView.swift */; };
+		BC5D75831DC054FA00F056F8 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D757E1DC054FA00F056F8 /* search@2x.png */; };
+		BC5D75841DC054FA00F056F8 /* search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D757F1DC054FA00F056F8 /* search@3x.png */; };
+		BC5D75851DC054FA00F056F8 /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D75801DC054FA00F056F8 /* search1.png */; };
+		BC5D75861DC054FA00F056F8 /* searchBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D75811DC054FA00F056F8 /* searchBg@2x.png */; };
+		BC5D75871DC054FA00F056F8 /* searchBg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D75821DC054FA00F056F8 /* searchBg@3x.png */; };
+		BC5D758A1DC059A600F056F8 /* IngreRedPacketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D75881DC059A600F056F8 /* IngreRedPacketCell.swift */; };
+		BC5D758B1DC059A600F056F8 /* IngreRedPacketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D75891DC059A600F056F8 /* IngreRedPacketCell.xib */; };
+		BC5D77131DC1959700F056F8 /* IngreTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D77111DC1959700F056F8 /* IngreTodayCell.swift */; };
+		BC5D77141DC1959700F056F8 /* IngreTodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D77121DC1959700F056F8 /* IngreTodayCell.xib */; };
+		BC5D77171DC19A5600F056F8 /* play-A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D77151DC19A5600F056F8 /* play-A@2x.png */; };
+		BC5D77181DC19A5600F056F8 /* play-A@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D77161DC19A5600F056F8 /* play-A@3x.png */; };
+		BC5D771A1DC1AF7C00F056F8 /* INgreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D77191DC1AF7C00F056F8 /* INgreHeaderView.swift */; };
+		BC5D771C1DC1B0D500F056F8 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5D771B1DC1B0D500F056F8 /* more_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,9 +149,44 @@
 		BC10A25E1DB9BA1100E6D5ED /* UILabel+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Common.swift"; sourceTree = "<group>"; };
 		BC10A2601DB9BB9200E6D5ED /* UIButton+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Common.swift"; sourceTree = "<group>"; };
 		BC10A2621DB9C39100E6D5ED /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		BC1848861DBEED6500750C99 /* IngreRecommendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreRecommendView.swift; sourceTree = "<group>"; };
+		BC1848881DBEF39400750C99 /* IngreBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreBannerCell.swift; sourceTree = "<group>"; };
+		BC1848891DBEF39400750C99 /* IngreBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreBannerCell.xib; sourceTree = "<group>"; };
+		BC18488C1DBEF7F600750C99 /* sdefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdefaultImage.png; sourceTree = "<group>"; };
+		BC1848921DBF0A2600750C99 /* IngreLikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreLikeCell.swift; sourceTree = "<group>"; };
+		BC1848931DBF0A2600750C99 /* IngreLikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreLikeCell.xib; sourceTree = "<group>"; };
 		BC28528F1DBDA4CE00570604 /* Controllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Controllers.json; sourceTree = "<group>"; };
 		BC2852911DBDACD400570604 /* KtcDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KtcDownloader.swift; sourceTree = "<group>"; };
 		BC2852931DBDB6CD00570604 /* IngreRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngreRecommend.swift; path = ../../../Community/main/model/IngreRecommend.swift; sourceTree = "<group>"; };
+		BC42F4B31DC2E0A400D0D75C /* IngreSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreSceneCell.swift; sourceTree = "<group>"; };
+		BC42F4B41DC2E0A400D0D75C /* IngreSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreSceneCell.xib; sourceTree = "<group>"; };
+		BC42F4B71DC2E59300D0D75C /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		BC42F4B91DC300F100D0D75C /* IngreSceneListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreSceneListCell.swift; sourceTree = "<group>"; };
+		BC42F4BA1DC300F100D0D75C /* IngreSceneListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreSceneListCell.xib; sourceTree = "<group>"; };
+		BC4FD1481DC6D0E000BA955F /* IngreTalnetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreTalnetCell.swift; sourceTree = "<group>"; };
+		BC4FD1491DC6D0E000BA955F /* IngreTalnetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreTalnetCell.xib; sourceTree = "<group>"; };
+		BC4FD14C1DC6DD3700BA955F /* IngrePostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngrePostCell.swift; sourceTree = "<group>"; };
+		BC4FD14D1DC6DD3700BA955F /* IngrePostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngrePostCell.xib; sourceTree = "<group>"; };
+		BC4FD1781DC8215400BA955F /* IngreTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreTopicCell.swift; sourceTree = "<group>"; };
+		BC4FD1791DC8215400BA955F /* IngreTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreTopicCell.xib; sourceTree = "<group>"; };
+		BC4FD17C1DC82F8200BA955F /* saoyisao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saoyisao@2x.png"; sourceTree = "<group>"; };
+		BC4FD17D1DC82F8200BA955F /* saoyisao@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saoyisao@3x.png"; sourceTree = "<group>"; };
+		BC4FD1801DC8397200BA955F /* KTCSegCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTCSegCtrl.swift; sourceTree = "<group>"; };
+		BC4FD1821DC8429100BA955F /* IngreMaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreMaterialView.swift; sourceTree = "<group>"; };
+		BC5D757C1DC0538C00F056F8 /* IngerLikeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngerLikeHeaderView.swift; path = ../../recommend/view/IngerLikeHeaderView.swift; sourceTree = "<group>"; };
+		BC5D757E1DC054FA00F056F8 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		BC5D757F1DC054FA00F056F8 /* search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@3x.png"; sourceTree = "<group>"; };
+		BC5D75801DC054FA00F056F8 /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search1.png; path = "../导航/search1.png"; sourceTree = "<group>"; };
+		BC5D75811DC054FA00F056F8 /* searchBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "searchBg@2x.png"; path = "../导航/searchBg@2x.png"; sourceTree = "<group>"; };
+		BC5D75821DC054FA00F056F8 /* searchBg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "searchBg@3x.png"; path = "../导航/searchBg@3x.png"; sourceTree = "<group>"; };
+		BC5D75881DC059A600F056F8 /* IngreRedPacketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngreRedPacketCell.swift; path = ../../main/view/IngreRedPacketCell.swift; sourceTree = "<group>"; };
+		BC5D75891DC059A600F056F8 /* IngreRedPacketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IngreRedPacketCell.xib; path = ../../main/view/IngreRedPacketCell.xib; sourceTree = "<group>"; };
+		BC5D77111DC1959700F056F8 /* IngreTodayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreTodayCell.swift; sourceTree = "<group>"; };
+		BC5D77121DC1959700F056F8 /* IngreTodayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreTodayCell.xib; sourceTree = "<group>"; };
+		BC5D77151DC19A5600F056F8 /* play-A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-A@2x.png"; sourceTree = "<group>"; };
+		BC5D77161DC19A5600F056F8 /* play-A@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-A@3x.png"; sourceTree = "<group>"; };
+		BC5D77191DC1AF7C00F056F8 /* INgreHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = INgreHeaderView.swift; path = ../../recommend/view/INgreHeaderView.swift; sourceTree = "<group>"; };
+		BC5D771B1DC1B0D500F056F8 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
 		CF400699BC50CAA995189AC9 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F5BB186922B517F1414676 /* Pods-TestKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,9 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				BC10A1F61DB9A85600E6D5ED /* common */,
+				BC10A2011DB9A85600E6D5ED /* Ingredient */,
 				BC10A1F71DB9A85600E6D5ED /* Community */,
 				BC10A1FC1DB9A85600E6D5ED /* foodClass */,
-				BC10A2011DB9A85600E6D5ED /* Ingredient */,
 				BC10A2121DB9A85600E6D5ED /* mall */,
 				BC10A2171DB9A85600E6D5ED /* mine */,
 				BC10A21C1DB9A85600E6D5ED /* resources */,
@@ -244,6 +314,7 @@
 				BC10A2621DB9C39100E6D5ED /* Const.swift */,
 				BC28528F1DBDA4CE00570604 /* Controllers.json */,
 				BC2852911DBDACD400570604 /* KtcDownloader.swift */,
+				BC4FD1801DC8397200BA955F /* KTCSegCtrl.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -399,6 +470,9 @@
 		BC10A2091DB9A85600E6D5ED /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BC1848861DBEED6500750C99 /* IngreRecommendView.swift */,
+				BC5D757C1DC0538C00F056F8 /* IngerLikeHeaderView.swift */,
+				BC5D77191DC1AF7C00F056F8 /* INgreHeaderView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -430,6 +504,7 @@
 		BC10A20D1DB9A85600E6D5ED /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BC4FD1821DC8429100BA955F /* IngreMaterialView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -461,6 +536,24 @@
 		BC10A2111DB9A85600E6D5ED /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BC1848881DBEF39400750C99 /* IngreBannerCell.swift */,
+				BC1848891DBEF39400750C99 /* IngreBannerCell.xib */,
+				BC1848921DBF0A2600750C99 /* IngreLikeCell.swift */,
+				BC1848931DBF0A2600750C99 /* IngreLikeCell.xib */,
+				BC5D75881DC059A600F056F8 /* IngreRedPacketCell.swift */,
+				BC5D75891DC059A600F056F8 /* IngreRedPacketCell.xib */,
+				BC5D77111DC1959700F056F8 /* IngreTodayCell.swift */,
+				BC5D77121DC1959700F056F8 /* IngreTodayCell.xib */,
+				BC42F4B31DC2E0A400D0D75C /* IngreSceneCell.swift */,
+				BC42F4B41DC2E0A400D0D75C /* IngreSceneCell.xib */,
+				BC42F4B91DC300F100D0D75C /* IngreSceneListCell.swift */,
+				BC42F4BA1DC300F100D0D75C /* IngreSceneListCell.xib */,
+				BC4FD1481DC6D0E000BA955F /* IngreTalnetCell.swift */,
+				BC4FD1491DC6D0E000BA955F /* IngreTalnetCell.xib */,
+				BC4FD14C1DC6DD3700BA955F /* IngrePostCell.swift */,
+				BC4FD14D1DC6DD3700BA955F /* IngrePostCell.xib */,
+				BC4FD1781DC8215400BA955F /* IngreTopicCell.swift */,
+				BC4FD1791DC8215400BA955F /* IngreTopicCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -591,6 +684,10 @@
 		BC10A22C1DB9AFA700E6D5ED /* 导航 */ = {
 			isa = PBXGroup;
 			children = (
+				BC4FD17C1DC82F8200BA955F /* saoyisao@2x.png */,
+				BC4FD17D1DC82F8200BA955F /* saoyisao@3x.png */,
+				BC5D757E1DC054FA00F056F8 /* search@2x.png */,
+				BC5D757F1DC054FA00F056F8 /* search@3x.png */,
 			);
 			path = "导航";
 			sourceTree = "<group>";
@@ -598,6 +695,7 @@
 		BC10A22D1DB9AFA700E6D5ED /* 公共 */ = {
 			isa = PBXGroup;
 			children = (
+				BC18488C1DBEF7F600750C99 /* sdefaultImage.png */,
 			);
 			path = "公共";
 			sourceTree = "<group>";
@@ -619,6 +717,13 @@
 		BC10A2301DB9AFA700E6D5ED /* 食材 */ = {
 			isa = PBXGroup;
 			children = (
+				BC5D75801DC054FA00F056F8 /* search1.png */,
+				BC5D75811DC054FA00F056F8 /* searchBg@2x.png */,
+				BC5D75821DC054FA00F056F8 /* searchBg@3x.png */,
+				BC5D77151DC19A5600F056F8 /* play-A@2x.png */,
+				BC5D77161DC19A5600F056F8 /* play-A@3x.png */,
+				BC5D771B1DC1B0D500F056F8 /* more_icon.png */,
+				BC42F4B71DC2E59300D0D75C /* play.png */,
 			);
 			path = "食材";
 			sourceTree = "<group>";
@@ -751,30 +856,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4FD17E1DC82F8200BA955F /* saoyisao@2x.png in Resources */,
 				BC10A2541DB9B2F500E6D5ED /* home_normal@2x.png in Resources */,
 				BC10A2461DB9AFDF00E6D5ED /* shop_select@2x.png in Resources */,
+				BC42F4B61DC2E0A400D0D75C /* IngreSceneCell.xib in Resources */,
 				BC10A2551DB9B2F500E6D5ED /* home_normal@3x.png in Resources */,
 				BC10A2451DB9AFDF00E6D5ED /* shike_select@3x.png in Resources */,
 				BC10A2561DB9B2F500E6D5ED /* mine_normal@2x.png in Resources */,
 				BC10A2411DB9AFDF00E6D5ED /* home_select@3x.png in Resources */,
+				BC1848951DBF0A2600750C99 /* IngreLikeCell.xib in Resources */,
+				BC5D77141DC1959700F056F8 /* IngreTodayCell.xib in Resources */,
 				BC10A23E1DB9AFDF00E6D5ED /* community_select@2x.png in Resources */,
+				BC5D758B1DC059A600F056F8 /* IngreRedPacketCell.xib in Resources */,
+				BC42F4B81DC2E59300D0D75C /* play.png in Resources */,
 				BC2852901DBDA4CE00570604 /* Controllers.json in Resources */,
 				BC10A1D21DB9A50B00E6D5ED /* LaunchScreen.storyboard in Resources */,
 				BC10A25B1DB9B2F500E6D5ED /* shop_normal@3x.png in Resources */,
 				BC10A2521DB9B2F500E6D5ED /* community_normal@2x.png in Resources */,
+				BC5D75871DC054FA00F056F8 /* searchBg@3x.png in Resources */,
+				BC4FD14F1DC6DD3700BA955F /* IngrePostCell.xib in Resources */,
+				BC5D77181DC19A5600F056F8 /* play-A@3x.png in Resources */,
 				BC10A2431DB9AFDF00E6D5ED /* mine_select@3x.png in Resources */,
 				BC10A1CF1DB9A50B00E6D5ED /* Assets.xcassets in Resources */,
 				BC10A2531DB9B2F500E6D5ED /* community_normal@3x.png in Resources */,
+				BC5D75851DC054FA00F056F8 /* search1.png in Resources */,
+				BC5D771C1DC1B0D500F056F8 /* more_icon.png in Resources */,
+				BC4FD17B1DC8215400BA955F /* IngreTopicCell.xib in Resources */,
 				BC10A2441DB9AFDF00E6D5ED /* shike_select@2x.png in Resources */,
+				BC18488D1DBEF7F600750C99 /* sdefaultImage.png in Resources */,
 				BC10A2401DB9AFDF00E6D5ED /* home_select@2x.png in Resources */,
 				BC10A2571DB9B2F500E6D5ED /* mine_normal@3x.png in Resources */,
+				BC18488B1DBEF39400750C99 /* IngreBannerCell.xib in Resources */,
 				BC10A1CD1DB9A50B00E6D5ED /* Main.storyboard in Resources */,
 				BC10A2581DB9B2F500E6D5ED /* shike_normal@2x.png in Resources */,
 				BC10A23F1DB9AFDF00E6D5ED /* community_select@3x.png in Resources */,
+				BC5D77171DC19A5600F056F8 /* play-A@2x.png in Resources */,
 				BC10A2591DB9B2F500E6D5ED /* shike_normal@3x.png in Resources */,
+				BC4FD17F1DC82F8200BA955F /* saoyisao@3x.png in Resources */,
+				BC5D75861DC054FA00F056F8 /* searchBg@2x.png in Resources */,
+				BC5D75831DC054FA00F056F8 /* search@2x.png in Resources */,
+				BC5D75841DC054FA00F056F8 /* search@3x.png in Resources */,
 				BC10A2421DB9AFDF00E6D5ED /* mine_select@2x.png in Resources */,
 				BC10A2471DB9AFDF00E6D5ED /* shop_select@3x.png in Resources */,
+				BC42F4BC1DC300F100D0D75C /* IngreSceneListCell.xib in Resources */,
 				BC10A25A1DB9B2F500E6D5ED /* shop_normal@2x.png in Resources */,
+				BC4FD14B1DC6D0E000BA955F /* IngreTalnetCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,19 +973,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4FD1831DC8429100BA955F /* IngreMaterialView.swift in Sources */,
 				BC10A1CA1DB9A50B00E6D5ED /* ViewController.swift in Sources */,
+				BC4FD14A1DC6D0E000BA955F /* IngreTalnetCell.swift in Sources */,
+				BC18488A1DBEF39400750C99 /* IngreBannerCell.swift in Sources */,
 				BC10A25D1DB9B98200E6D5ED /* UIView+Common.swift in Sources */,
 				BC2852921DBDACD400570604 /* KtcDownloader.swift in Sources */,
 				BC10A2201DB9A9DB00E6D5ED /* IngredientViewController.swift in Sources */,
+				BC5D77131DC1959700F056F8 /* IngreTodayCell.swift in Sources */,
 				BC10A2241DB9AA2E00E6D5ED /* MallViewController.swift in Sources */,
+				BC5D757D1DC0538C00F056F8 /* IngerLikeHeaderView.swift in Sources */,
 				BC2852941DBDB6CD00570604 /* IngreRecommend.swift in Sources */,
 				BC10A22A1DB9AB9100E6D5ED /* MainTabBarViewController.swift in Sources */,
+				BC42F4BB1DC300F100D0D75C /* IngreSceneListCell.swift in Sources */,
+				BC42F4B51DC2E0A400D0D75C /* IngreSceneCell.swift in Sources */,
 				BC10A25F1DB9BA1100E6D5ED /* UILabel+Common.swift in Sources */,
 				BC10A2261DB9AA4800E6D5ED /* MineViewController.swift in Sources */,
 				BC10A1C81DB9A50B00E6D5ED /* AppDelegate.swift in Sources */,
+				BC5D771A1DC1AF7C00F056F8 /* INgreHeaderView.swift in Sources */,
+				BC4FD14E1DC6DD3700BA955F /* IngrePostCell.swift in Sources */,
 				BC10A2281DB9AA6600E6D5ED /* FoodClassViewController.swift in Sources */,
+				BC1848941DBF0A2600750C99 /* IngreLikeCell.swift in Sources */,
 				BC10A2221DB9AA0600E6D5ED /* CommunityViewController.swift in Sources */,
+				BC4FD1811DC8397200BA955F /* KTCSegCtrl.swift in Sources */,
+				BC4FD17A1DC8215400BA955F /* IngreTopicCell.swift in Sources */,
+				BC5D758A1DC059A600F056F8 /* IngreRedPacketCell.swift in Sources */,
 				BC10A2611DB9BB9200E6D5ED /* UIButton+Common.swift in Sources */,
+				BC1848871DBEED6500750C99 /* IngreRecommendView.swift in Sources */,
 				BC10A21E1DB9A91000E6D5ED /* BaseViewController.swift in Sources */,
 				BC10A2631DB9C39100E6D5ED /* Const.swift in Sources */,
 			);

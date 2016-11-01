@@ -28,22 +28,22 @@ class IngreRecommend: NSObject {
 }
 class IngreRecommendData:NSObject{
     var bannerArray:[IngreRecommendBanner]?
-    var widgetList:[NSObject]?
+    var widgetList:[IngreRecommendWidgetList]?
     
     class func  parseModel(json:JSON)->IngreRecommendData{
         let model=IngreRecommendData()
         //广告数据
         var tmpbannerArray=[IngreRecommendBanner]()
-        for (_,subjson) in json["bannerArray"]{
+        for (_,subjson) in json["banner"]{
             let bannerModel=IngreRecommendBanner.paresModel(subjson)
             tmpbannerArray.append(bannerModel)
         }
         model.bannerArray=tmpbannerArray
         
         //列表数据
-        var tmpList=[NSObject]()
+        var tmpList=[IngreRecommendWidgetList]()
         for (index,subjson):(String,JSON) in json["widgetList"]{
-            let wmodel=NSObject()
+            let wmodel=IngreRecommendWidgetList.parseModel(subjson)
         tmpList.append(wmodel)
         }
         model.widgetList=tmpList
@@ -71,7 +71,45 @@ class IngreRecommendBanner:NSObject{
         model.type_id=json["type_id"].number
         return model
     }
+    
 }
-
-
+class IngreRecommendWidgetList:NSObject{
+    var desc:String?
+    var title:String?
+    var title_link:String?
+    
+    var widget_data:[IngreRecommendWidgetData]?
+    var widget_id:NSNumber?
+    var widget_type:NSNumber?
+    class func parseModel(json:JSON)->IngreRecommendWidgetList{
+    let model=IngreRecommendWidgetList()
+        model.desc=json["desc"].string
+        model.title=json["title"].string
+        model.title_link=json["title_link"].string
+        var dataArray=[IngreRecommendWidgetData]()
+        for (_,subjson):(String,JSON) in
+            json["widget_data"]{
+                let subModel=IngreRecommendWidgetData.parseModel(subjson)
+                dataArray.append(subModel)
+        }
+        model.widget_data=dataArray
+        model.widget_id=json["widget_id"].number
+        model.widget_type=json["widget_type"].number
+        return model
+    }
+}
+class IngreRecommendWidgetData:NSObject{
+    var content:String?
+    var id:NSNumber?
+    var link:String?
+    var type:String?
+    class func parseModel(json:JSON)->IngreRecommendWidgetData{
+        let model=IngreRecommendWidgetData()
+        model.content=json["content"].string
+        model.id=json["id"].number
+        model.link=json["link"].string
+        model.type=json["type"].string
+        return model
+    }
+}
 
