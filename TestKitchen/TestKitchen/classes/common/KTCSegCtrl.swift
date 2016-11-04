@@ -12,6 +12,8 @@ protocol KTCSegCtrlDelegate:NSObjectProtocol {
 }
 class KTCSegCtrl: UIView {
     weak var delegate:KTCSegCtrlDelegate?
+    //下划线
+    private var lineView:UIImageView?
     var selectIndex:Int=0{
         didSet{
             //取消之前的选中状态
@@ -19,13 +21,16 @@ class KTCSegCtrl: UIView {
             if lastBtn?.isKindOfClass(KTCSegBtn)==true{
                 let tmpBtn=lastBtn as! KTCSegBtn
                 tmpBtn.clicked=false
+                tmpBtn.userInteractionEnabled=true
             }
             //选中当前点击的按钮
             let curBtn=viewWithTag(300+selectIndex)
             if curBtn?.isKindOfClass(KTCSegBtn)==true{
                 let tmpBtn=curBtn as! KTCSegBtn
                 tmpBtn.clicked=true
+                tmpBtn.userInteractionEnabled=false
             }
+            lineView?.frame.origin.x=(lineView?.frame.width)!*CGFloat(selectIndex)
         }
     }
      init(frame: CGRect,titleArray:[String]) {
@@ -55,6 +60,9 @@ class KTCSegCtrl: UIView {
             addSubview(btn)
             
         }
+        lineView=UIImageView(frame: CGRectMake(0, 42, w, 2))
+        lineView?.backgroundColor=UIColor.redColor()
+        addSubview(lineView!)
     }
     func clickBtn(btn:KTCSegBtn){
     let index=btn.tag-300

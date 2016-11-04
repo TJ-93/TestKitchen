@@ -17,6 +17,8 @@ class IngredientViewController: BaseViewController {
     private var materialView:IngreMaterialView?
     //分类视图
     private var categoryView:IngreMaterialView?
+    //导航上面的选择控件
+    private var  segCtrl:KTCSegCtrl?
     //点击食材的推荐页面的某一部分，跳转到后面的界面
 //    var jumpClosure:IngreJumpClosure?
     override func viewDidLoad() {
@@ -26,11 +28,30 @@ automaticallyAdjustsScrollViewInsets=false
         createNav()
         createHomePage()
         downloadRecommendData()
+        downloadRecommendMaterial()
+        downloadCategoryData()
+    }
+    
+    func downloadCategoryData(){
+        let downloader=KtcDownloader()
+        downloader.downloadType = .IngreCategory
+            downloader.delegate=self
+        downloader.postWithUrl(kHostUrl, params: ["methodName":"CategoryIndex"])
+    }
+    
+    func downloadRecommendMaterial(){
+//        methodName=MaterialSubtype&token=&user_id=&version=4.32
+        let params=["methodName":"MaterialSubtype"]
+        let downloader=KtcDownloader()
+        downloader.downloadType = .IngreMaterial
+        downloader.delegate=self
+        downloader.postWithUrl(kHostUrl, params: params)
     }
     //创建首页视图
     func createHomePage(){
         scrollView=UIScrollView()
         scrollView!.pagingEnabled=true
+        scrollView?.delegate=self
         view.addSubview(scrollView!)
         scrollView!.snp_makeConstraints { (make) in
             make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
@@ -79,8 +100,8 @@ automaticallyAdjustsScrollViewInsets=false
         self.addNavBtn("saoyisao", target: self, action: #selector(scanAction), isLeft: true)
         self.addNavBtn("search", target: self, action: #selector(searchAction), isLeft: false)
         //选择控件
-        let segCtrl=KTCSegCtrl(frame: CGRect(x: 80, y: 0, width: screenW-160, height: 44), titleArray: ["推荐","食材","分类"])
-        segCtrl.delegate=self
+         segCtrl=KTCSegCtrl(frame: CGRect(x: 80, y: 0, width: screenW-160, height: 44), titleArray: ["推荐","食材","分类"])
+        segCtrl!.delegate=self
         navigationItem.titleView=segCtrl
     }
     func scanAction(){
@@ -95,8 +116,9 @@ automaticallyAdjustsScrollViewInsets=false
     }
     func downloadRecommendData(){
      
-        let params=["methodName":"SceneHome","token":"","user_id":"","version":"4.5"]
+        let params=["methodName":"SceneHome"]
         let downloader=KtcDownloader()
+        downloader.downloadType = .IngreRecommend
         downloader.delegate=self
         downloader.postWithUrl(kHostUrl, params: params)
     }
@@ -120,24 +142,48 @@ extension IngredientViewController:KTCDownloaderDelegate{
     
     
     func downloader(downloader: KtcDownloader, didFinishWithData data: NSData?) {
-//        _=NSString(data: data!, encoding: NSUTF8StringEncoding)
-//        print(str)
-        if let tmpData=data{
-            let recommendModel=IngreRecommend.paraseData(tmpData)
-            
-            
-//            let recommendView=IngreRecommendView(frame: CGRectZero)
-            recommendView!.model=recommendModel
-//            view.addSubview(recommendView!)
-            recommendView!.jumpClosure={
-                jumpUrl in
-                print(jumpUrl)
+        if downloader.downloadType == .IngreRecommend{
+            if let tmpData=data{
+                let recommendModel=IngreRecommend.paraseData(tmpData)
+                recommendView!.model=recommendModel
+                recommendView!.jumpClosure={
+                    [weak self]urlString in
+                    self!.handleClickEvent(urlString)                }
+                
             }
-//            recommendView!.snp_makeConstraints(closure: { (make) in
-//                make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 64, left: 0, bottom: 49, right: 0))
-//            })
-            
+
         }
+        else if downloader.downloadType == .IngreMaterial{
+//            let str=NSString(data: data!,encoding:NSUTF8StringEncoding)
+//            print(str)
+            if let tmpData=data{
+                let model=IngreMaterial.parseData(tmpData)
+                materialView?.model=model
+                materialView?.jumpClosure={
+                    [weak self]urlString in
+                    self!.handleClickEvent(urlString)
+                }
+            }
+            
+        }else if downloader.downloadType == .IngreCategory{
+            if let tmpData=data{
+                let model=IngreMaterial.parseData(tmpData)
+                categoryView?.model=model
+                categoryView?.jumpClosure={
+                    [weak self]urlString in
+                    self!.handleClickEvent(urlString)
+                }
+            }
+
+        }
+        
+        
+    
+}
+    
+    //处理点击事件的方法
+    func handleClickEvent(urlString:String){
+        IngreService.handldEvent(urlString, onViewController: self)
     }
     
 }
@@ -147,7 +193,14 @@ extension IngredientViewController:KTCSegCtrlDelegate{
         scrollView?.setContentOffset(CGPointMake(CGFloat(index)*screenW,0), animated: true)
     }
 }
-
+//MARK:UIScrollView的代理
+extension IngredientViewController:UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let index=scrollView.contentOffset.x/scrollView.bounds.width
+        segCtrl?.selectIndex=Int(index)
+        
+    }
+}
 
 
 

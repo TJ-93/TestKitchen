@@ -42,7 +42,7 @@ class IngreRecommendData:NSObject{
         
         //列表数据
         var tmpList=[IngreRecommendWidgetList]()
-        for (index,subjson):(String,JSON) in json["widgetList"]{
+        for (_,subjson):(String,JSON) in json["widgetList"]{
             let wmodel=IngreRecommendWidgetList.parseModel(subjson)
         tmpList.append(wmodel)
         }
